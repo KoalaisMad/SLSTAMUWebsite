@@ -50,7 +50,7 @@ const EventsSection = () => {
                 onClick={() => window.open(calendarSubscribeUrl, '_blank')}
                 className="bg-white text-sls hover:bg-white/90 font-bold text-base px-6 py-6 rounded-lg shadow-lg hover:shadow-xl transition-all"
               >
-                Add to your calendar →
+                Add to your calendar → →
               </Button>
             </div>
             
