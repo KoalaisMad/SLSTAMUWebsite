@@ -22,9 +22,9 @@ const Footer = () => {
           {/* Logo and Description */}
           <div className="md:col-span-2 animate-fade-in">
             <div className="flex items-center gap-3 mb-4 group">
-              <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center group-hover:bg-white/20 transition-all duration-300 group-hover:scale-110 group-hover:rotate-3">
-                <BarChart3 className="h-6 w-6 text-white group-hover:scale-110 transition-transform" />
-              </div>
+              <div className="w-10 h-10 rounded-lg flex items-center justify-center overflow-hidden">
+              <img src="/logo.png" alt="SLS Logo" className="w-full h-full object-cover" />
+            </div>
               <div>
                 <h3 className="font-bold text-lg group-hover:text-blue-100 transition-colors">Stats Learning Society</h3>
                 <p className="text-sm text-white/80">Texas A&M University</p>

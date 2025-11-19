@@ -50,22 +50,36 @@ const EventsSection = () => {
                 onClick={() => window.open(calendarSubscribeUrl, '_blank')}
                 className="bg-white text-sls hover:bg-white/90 font-bold text-base px-6 py-6 rounded-lg shadow-lg hover:shadow-xl transition-all"
               >
-                view calendar information →
+                Add to your calendar →
               </Button>
             </div>
             
-            <div className="relative hidden md:block p-8 lg:p-12">
-              <div className="relative w-full aspect-square">
-                {/* Placeholder for floating calendar mockup images */}
-                <div className="absolute inset-0 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 flex items-center justify-center">
+            <div className="relative hidden md:block p-1 lg:p-10">
+              <div className="rw-full max-w-md">
+                {<div className="mb-2">
+          <div className="bg-muted/30 rounded-2xl p-8 md:p-2">
+            <div className="relative w-full rounded-xl overflow-hidden shadow-2xl border border-border">
+              <div className="bg-background aspect-[8/10]">
+                <iframe
+                  src={calendarEmbedUrl}
+                  className="w-full h-full"
+                  frameBorder="0"
+                  scrolling="no"
+                  title="TAMU SLS Events Calendar"
+                />
+              </div>
+            </div>
+          </div>
+        </div>}
+                {/* <div className="absolute inset-0 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 flex items-center justify-center">
                   <Calendar className="w-32 h-32 text-white/30" />
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
         </div>
 
-        {/* Calendar Embed */}
+        {/* Calendar Embed
         <div className="mb-24">
           <div className="bg-muted/30 rounded-2xl p-8 md:p-12">
             <div className="relative w-full rounded-xl overflow-hidden shadow-2xl border border-border">
@@ -80,7 +94,7 @@ const EventsSection = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Regular Meetings */}
         <div>

@@ -132,7 +132,7 @@ const ContactSection = () => {
                     <div className="text-xs text-muted-foreground">Workshops</div>
                   </div>
                   <div>
-                    <div className="text-2xl font-bold text-sls">15</div>
+                    <div className="text-2xl font-bold text-sls">15+</div>
                     <div className="text-xs text-muted-foreground">Projects</div>
                   </div>
                 </div>
