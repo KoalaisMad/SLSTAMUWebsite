@@ -1,0 +1,5 @@
+/* Root element - allow full width for the website */
+#root {
+  width: 100%;
+  min-height: 100vh;
+}

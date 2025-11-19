@@ -1,0 +1,281 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 0 0% 9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 9%;
+
+    --primary: 0 100% 50%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 20%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 0 0% 96%;
+    --accent-foreground: 0 0% 9%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 94%;
+    --ring: 0 100% 50%;
+
+    /* Enhanced ocean waves theme design tokens */
+    --sls-blue: 195 100% 45%;        /* Deep ocean blue */
+    --sls-blue-hover: 195 100% 40%;
+    --sls-blue-light: 190 100% 95%;  /* Light seafoam */
+    --sls-blue-dark: 200 100% 30%;   /* Deep sea */
+    --sls-white: 0 0% 100%;
+    --sls-accent: 180 100% 85%;      /* Aqua accent */
+    --sls-gradient-primary: 190 85% 50%;   /* Tropical water */
+    --sls-gradient-secondary: 200 90% 60%; /* Ocean blue */
+    
+    /* Academic section colors - ocean inspired */
+    --section-primary: 195 85% 45%;
+    --section-primary-foreground: 0 0% 98%;
+    --section-secondary: 190 100% 96%;
+    --section-secondary-foreground: 195 85% 40%;
+    
+    /* Enhanced gradients - wave-inspired */
+    --gradient-hero: linear-gradient(135deg, hsl(195 85% 50%), hsl(185 90% 60%), hsl(200 85% 55%));
+    --gradient-academic: linear-gradient(180deg, hsl(190 100% 97%), hsl(0 0% 100%));
+    --gradient-section: linear-gradient(135deg, hsl(0 0% 100%), hsl(190 100% 98%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(190 100% 99%));
+    --gradient-mesh: radial-gradient(circle at 25% 25%, hsl(195 85% 50% / 0.1) 0%, transparent 50%), 
+                     radial-gradient(circle at 75% 75%, hsl(185 90% 60% / 0.1) 0%, transparent 50%);
+    
+    /* Enhanced shadows with ocean colors */
+    --shadow-academic: 0 4px 30px hsl(195 85% 50% / 0.12);
+    --shadow-card: 0 4px 20px hsl(195 85% 50% / 0.08);
+    --shadow-card-hover: 0 8px 40px hsl(195 85% 50% / 0.15);
+    --shadow-section: 0 10px 50px hsl(195 85% 50% / 0.1);
+    --shadow-hero: 0 25px 80px hsl(195 85% 50% / 0.2);
+    --shadow-glow: 0 0 60px hsl(195 85% 50% / 0.4);
+    
+    /* Typography and spacing */
+    --font-display: 'Space Grotesk', system-ui, sans-serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-fast: all 0.15s ease-out;
+
+    /* Popup specific */
+    --popup-width: 380px;
+    --popup-height: 600px;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+    font-feature-settings: 'cv11', 'ss01';
+    font-variation-settings: 'opsz' 32;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #root {
+    min-height: 100vh;
+    width: 100%;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: -0.025em;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-sls to-sls-gradient-secondary bg-clip-text text-transparent;
+  }
+
+  .glass-effect {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+
+  .mesh-gradient {
+    background: var(--gradient-mesh);
+  }
+
+  /* Floating animation */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    33% { transform: translateY(-10px) rotate(1deg); }
+    66% { transform: translateY(5px) rotate(-1deg); }
+  }
+
+  @keyframes float-reverse {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    33% { transform: translateY(10px) rotate(-1deg); }
+    66% { transform: translateY(-5px) rotate(1deg); }
+  }
+
+  /* Pulse glow animation */
+  @keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 20px hsl(var(--sls-blue) / 0.3); }
+    50% { box-shadow: 0 0 40px hsl(var(--sls-blue) / 0.6); }
+  }
+
+  /* Bounce in animation */
+  @keyframes bounce-in {
+    0% { transform: scale(0.3) rotate(-180deg); opacity: 0; }
+    50% { transform: scale(1.05) rotate(-5deg); }
+    70% { transform: scale(0.9) rotate(5deg); }
+    100% { transform: scale(1) rotate(0deg); opacity: 1; }
+  }
+
+  /* Slide up with fade */
+  @keyframes slide-up-fade {
+    0% { transform: translateY(50px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+
+  /* Wiggle animation */
+  @keyframes wiggle {
+    0%, 7% { transform: rotateZ(0); }
+    15% { transform: rotateZ(-15deg); }
+    20% { transform: rotateZ(10deg); }
+    25% { transform: rotateZ(-10deg); }
+    30% { transform: rotateZ(6deg); }
+    35% { transform: rotateZ(-4deg); }
+    40%, 100% { transform: rotateZ(0); }
+  }
+
+  /* Horizontal scrolling animation */
+  @keyframes scroll-horizontal {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  /* Wave animations */
+  @keyframes wave-flow {
+    0%, 100% { transform: translateX(0) translateY(0); }
+    25% { transform: translateX(-5px) translateY(-3px); }
+    50% { transform: translateX(-10px) translateY(0); }
+    75% { transform: translateX(-5px) translateY(3px); }
+  }
+
+  @keyframes wave-ripple {
+    0% { transform: scale(1); opacity: 0.6; }
+    50% { transform: scale(1.1); opacity: 0.3; }
+    100% { transform: scale(1.2); opacity: 0; }
+  }
+
+  @keyframes ocean-shimmer {
+    0%, 100% { opacity: 0.1; }
+    50% { opacity: 0.3; }
+  }
+
+  .animate-scroll-horizontal {
+    animation: scroll-horizontal 40s linear infinite;
+  }
+
+  .animate-scroll-horizontal:hover {
+    animation-play-state: paused;
+  }
+
+  .animate-wave-flow {
+    animation: wave-flow 8s ease-in-out infinite;
+  }
+
+  .animate-ocean-shimmer {
+    animation: ocean-shimmer 4s ease-in-out infinite;
+  }
+
+  /* Hide scrollbar utility */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
